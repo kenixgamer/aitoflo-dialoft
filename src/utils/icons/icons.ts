@@ -1,0 +1,94 @@
+import { RiRobot2Line, RiCalendarLine, RiDeleteBinLine, RiMoreLine, RiEditLine, RiArrowLeftSLine, RiArrowRightSLine } from "react-icons/ri";
+import { BiBook, BiPhone, BiHistory, BiMoney, BiSearch, BiFilter, BiCheck, BiCircle, BiDownload, BiUpload } from "react-icons/bi";
+import { BsFileEarmarkText, BsKey, BsCheck, BsThreeDots, BsUpload, BsDownload, BsClock, BsQuestionCircle } from "react-icons/bs";
+import { IoIosLogOut } from "react-icons/io";
+import { FaRobot, FaPhone, FaCheck, FaPlay, FaPause } from "react-icons/fa";
+import { MdCancel, MdEmail, MdDelete, MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
+import { AiOutlineCalendar, AiOutlineCheck, AiOutlineUpload, AiOutlineClose, AiOutlineEye, AiOutlineEyeInvisible, AiOutlineFileText, AiOutlinePlus } from "react-icons/ai";
+import { ImSpinner8 } from "react-icons/im";
+import { IoClose, IoCalendarOutline } from "react-icons/io5";
+import { IoMdCheckmark } from "react-icons/io";
+import { HiDotsHorizontal, HiOutlineTrash } from "react-icons/hi";
+import { TbFileUpload } from "react-icons/tb";
+import { VscTrash } from "react-icons/vsc";
+import { GrFormNext, GrFormPrevious } from "react-icons/gr";
+import { FiCopy } from "react-icons/fi";
+import { CgSpinner } from "react-icons/cg";
+import { LuCalendar } from "react-icons/lu";
+
+export const AssistantIcon = () => RiRobot2Line({ className: "text-xl text-purple-500" });
+export const BookIcon = () => BiBook({ className: "text-xl text-purple-500" });
+export const PhoneIcon = () => BiPhone({ className: "text-xl text-purple-500" });
+export const FileIcon = () => BsFileEarmarkText({ className: "text-xl text-purple-500" });
+export const HistoryIcon = () => BiHistory({ className: "text-xl text-purple-500" });
+export const MoneyIcon = () => BiMoney({ className: "text-xl text-purple-500" });
+export const KeyIcon = () => BsKey({ className: "text-xl text-purple-500" });
+export const LogoutIcon = () => IoIosLogOut({ className: "text-xl text-purple-500" });
+export const RobotIcon = () => FaRobot({ className: "w-8 h-8 text-purple-500" });
+export const PhoneIconSmall = () => FaPhone({ size: 16, className: "text-purple-500" });
+export const CancelIcon = (props: any) => MdCancel({ ...props, className: "text-purple-500" });
+export const EmailIcon = () => MdEmail({ className: "w-6 h-6 text-purple-500" });
+export const SearchIcon = () => BiSearch({ className: "w-6 h-6 ml-2 flex-shrink-0 text-purple-500" });
+export const CalendarIcon = () => AiOutlineCalendar({ className: "mr-2 h-4 w-4 text-purple-500" });
+export const PhoneHeaderIcon = () => BiPhone({ className: "text-xl text-purple-500", size: 25 });
+export const CheckIcon = () => AiOutlineCheck({ className: "h-4 w-4 text-purple-500" });
+export const ChevronLeftIcon = (props: any) => RiArrowLeftSLine({ ...props, className: "h-4 w-4 text-purple-500" });
+export const ChevronRightIcon = (props: any) => RiArrowRightSLine({ ...props, className: "h-4 w-4 text-purple-500" });
+export const CircleIcon = () => AiOutlineCheck({ className: "h-2 w-2 text-purple-500" });
+export const UploadIcon = () => AiOutlineUpload({ className: "w-10 h-10 text-purple-500" });
+export const CheckSmallIcon = () => BsCheck({ className: "h-4 w-4 text-purple-500" });
+export const ThreeDotsIcon = () => BsThreeDots({ className: "h-4 w-4 text-purple-500" });
+export const UploadIconLarge = () => BsUpload({ className: "h-4 w-4 text-purple-500" });
+export const CheckLargeIcon = ({className} : any) => FaCheck({ className: `h-5 w-5 text-purple-500 ${className}` });
+export const SpinnerIcon = () => ImSpinner8({ className: "h-4 w-4 animate-spin text-purple-500" });
+export const CloseIcon = () => IoClose({ className: "h-4 w-4 text-purple-500" });
+export const DialogCloseIcon = () => AiOutlineClose({ className: "h-4 w-4 text-purple-500" });
+export const DotsHorizontalIcon = () => HiDotsHorizontal({ className: "h-4 w-4 text-purple-500" });
+export const LoaderIcon = () => ImSpinner8({ className: "animate-spin h-4 w-4 text-purple-500" });
+
+// Delete related icons with red color
+export const DeleteIcon = () => RiDeleteBinLine({ className: "h-4 w-4 text-red-600" });
+export const TrashIcon = () => VscTrash({ className: "h-4 w-4 text-red-600" });
+export const TrashIconOutline = () => HiOutlineTrash({ className: "h-4 w-4 text-red-600" });
+export const TrashIconAlt = () => HiOutlineTrash({ className: "h-4 w-4 text-red-600" });
+export const DeleteIconMd = () => MdDelete({ className: "cursor-pointer text-red-600", size: 24 });
+
+// Continue with purple for remaining icons
+export const CalendarLineIcon = () => RiCalendarLine({ className: "h-4 w-4 text-purple-500" });
+export const MoreIcon = () => RiMoreLine({ className: "h-4 w-4 text-purple-500" });
+export const EditIcon = () => RiEditLine({ className: "h-4 w-4 text-purple-500" });
+export const FilterIcon = () => BiFilter({ className: "h-4 w-4 text-purple-500" });
+export const DownloadIcon = () => BsDownload({ className: "h-4 w-4 text-purple-500" });
+export const ClockIcon = () => BsClock({ className: "h-4 w-4 text-purple-500" });
+export const EyeIcon = () => AiOutlineEye({ className: "h-4 w-4 text-purple-500" });
+export const EyeOffIcon = () => AiOutlineEyeInvisible({ className: "h-4 w-4 text-purple-500" });
+export const PlayIcon = () => FaPlay({ className: "h-4 w-4 text-purple-500" });
+export const PauseIcon = () => FaPause({ className: "h-4 w-4 text-purple-500" });
+export const FileUploadIcon = () => TbFileUpload({ className: "h-4 w-4 text-purple-500" });
+export const NextIcon = () => GrFormNext({ className: "h-4 w-4 text-purple-500" });
+export const PreviousIcon = () => GrFormPrevious({ className: "h-4 w-4 text-purple-500" });
+export const FileTextIcon = () => AiOutlineFileText({ className: "h-4 w-4 text-purple-500" });
+
+// Continue with remaining icons in purple
+export const CopyIcon = () => FiCopy({ className: "h-4 w-4 text-purple-500" });
+export const PlusIcon = () => AiOutlinePlus({ className: "h-4 w-4 text-purple-500" });
+export const ArrowLeftIcon = () => MdKeyboardArrowLeft({ className: "h-4 w-4 text-purple-500" });
+export const ArrowRightIcon = () => MdKeyboardArrowRight({ className: "h-4 w-4 text-purple-500" });
+export const CheckmarkIcon = () => IoMdCheckmark({ className: "h-4 w-4 text-purple-500" });
+export const SpinnerIconLarge = () => CgSpinner({ className: "h-6 w-6 animate-spin text-purple-500" });
+export const CheckIconAlt = (props: any) => BiCheck({ ...props, className: "h-4 w-4 text-purple-500" });
+export const CircleIconAlt = (props: any) => BiCircle({ ...props, className: "h-4 w-4 text-purple-500" });
+export const DownloadIconAlt = () => BiDownload({ className: "h-4 w-4 text-purple-500", size: 16 });
+export const UploadIconAlt = () => BiUpload({ className: "mx-auto h-12 w-12 text-purple-500" });
+export const HistoryIconAlt = () => BiHistory({ className: "h-6 w-6 text-purple-500" });
+export const CalendarIconAlt = () => IoCalendarOutline({ className: "h-4 w-4 text-purple-500" });
+export const PlusIconAlt = () => AiOutlinePlus({ className: "h-4 w-4 text-white" });
+export const FileEarmarkIcon = () => BsFileEarmarkText({ className: "text-xl text-purple-500" });
+export const YoutubeIcon = () => ({className: "w-6 h-6 inline-block text-purple-500"});
+export const PlayIconMd = () => FaPlay({ className: "h-5 w-5 text-purple-500" });
+export const PauseIconMd = () => FaPause({ className: "h-5 w-5 text-purple-500" });
+export const PlayIconLarge = () => FaPlay({ className: "h-6 w-6 text-purple-500" });
+export const PauseIconLarge = () => FaPause({ className: "h-6 w-6 text-purple-500" });
+export const DateIcon = () => LuCalendar({ className: "h-4 w-4 mr-2 text-purple-500" });
+
+export const HelpIcon = () => BsQuestionCircle({ className: "text-xl text-purple-500" });
