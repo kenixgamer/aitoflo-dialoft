@@ -307,6 +307,7 @@ export default function AIAssistantConfig() {
         metadata: {
           checkAvailabilityApiKey:
             assistant?.metadata?.checkAvailabilityApiKey || "",
+          checkAvailabilityTimezone : assistant?.metadata?.checkAvailabilityTimezone || "",
           content: assistant.metadata?.content || "",
           checkAvailabilityEventTypeId:
             assistant?.metadata?.checkAvailabilityEventTypeId || "",
@@ -318,6 +319,7 @@ export default function AIAssistantConfig() {
             assistant?.metadata?.bookAppointmentEventTypeId || "",
           bookAppointmentDescription:
             assistant?.metadata?.bookAppointmentDescription || "",
+          bookAppointmentTimezone : assistant?.metadata?.bookAppointmentTimezone || "",
           callForwardDescription:
             assistant?.metadata?.callForwardDescription || "",
           callEndDescription: assistant.metadata?.callEndDescription || "",
@@ -586,10 +588,6 @@ export default function AIAssistantConfig() {
         onSelect={handleMainVoiceSelect}
         selectedVoiceId={formData.mainVoiceId}
       />
-
-      {/* <div>
-      {JSON.stringify(formData)}
-    </div> */}
     </>
   );
 }
