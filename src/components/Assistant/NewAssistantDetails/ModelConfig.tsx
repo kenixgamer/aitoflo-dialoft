@@ -97,7 +97,7 @@ export default function ModelConfig({ formData, setFormData }: any) {
                 id="systemMessage"
                 value={formData?.metadata?.content}
                 onChange={(e) => setFormData({ ...formData, metadata: {...formData.metadata, content: e.target.value } })}
-                placeholder="Enter the system message. Use {{variableName}} for dynamic values from your data."
+                placeholder="Define your AI voice agent’s persona, style, and response behavior here.. Use {{variableName}} for dynamic values from your data."
                 className="bg-zinc-900 border-zinc-800 text-white focus:border-zinc-700 focus-visible:ring-1 focus-visible:ring-zinc-700 min-h-[300px]"
               />
             </div>
