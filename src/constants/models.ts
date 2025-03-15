@@ -19,4 +19,24 @@ export const MODELS = [
     name: "GPT-4 Turbo Preview",
     description: "Preview version of GPT-4 Turbo with latest improvements",
   },
-]; 
+  {
+    id: "gpt-4.5-preview",
+    name: "GPT-4.5 Preview",
+    description: "Preview version of GPT-4.5 with enhanced capabilities",
+  },
+  {
+    id: "chatgpt-4o-latest",
+    name: "ChatGPT-4o (Latest)",
+    description: "Latest version of ChatGPT-4o with improved performance",
+  },
+  {
+    id: "gpt-4o-mini",
+    name: "GPT-4o Mini",
+    description: "Smaller and faster version of GPT-4o for efficient responses",
+  },
+  {
+    id: "gpt-4o",
+    name: "GPT-4o",
+    description: "Optimized version of GPT-4 for multimodal capabilities",
+  },
+];
