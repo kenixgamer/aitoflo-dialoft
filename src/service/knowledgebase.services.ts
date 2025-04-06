@@ -33,7 +33,7 @@ export const uploadFilesToVapi = async (files : File[]) => {
           formData,
           {
             headers: {
-              Authorization: `Bearer ${import.meta.env.VITE_VAPI_API_KEY}`,
+              Authorization: `Bearer ${import.meta.env.VITE_VAPI_PUBLIC_KEY}`,
             },
           }
         );
