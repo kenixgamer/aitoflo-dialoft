@@ -41,7 +41,6 @@ const AssistantLists = () => {
    try {
     await createAssistant({workShopId: workshopId, assistantName});
    } catch (error) {
-    console.log("Error Creating Assistant", error);
    }finally{
     setShowAlertDialog(false);
     setAssistantName("");

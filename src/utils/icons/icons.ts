@@ -4,7 +4,7 @@ import { BsFileEarmarkText, BsKey, BsCheck, BsThreeDots, BsUpload, BsDownload, B
 import { IoIosLogOut } from "react-icons/io";
 import { FaRobot, FaPhone, FaCheck, FaPlay, FaPause } from "react-icons/fa";
 import { MdCancel, MdEmail, MdDelete, MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
-import { AiOutlineCalendar, AiOutlineCheck, AiOutlineUpload, AiOutlineClose, AiOutlineEye, AiOutlineEyeInvisible, AiOutlineFileText, AiOutlinePlus } from "react-icons/ai";
+import { AiOutlineCalendar, AiOutlineCheck, AiOutlineUpload, AiOutlineClose, AiOutlineEye, AiOutlineEyeInvisible, AiOutlineFileText, AiOutlinePlus, AiFillTool } from "react-icons/ai";
 import { ImSpinner8 } from "react-icons/im";
 import { IoClose, IoCalendarOutline } from "react-icons/io5";
 import { IoMdCheckmark } from "react-icons/io";
@@ -21,6 +21,7 @@ export const BookIcon = () => BiBook({ className: "text-xl text-purple-500" });
 export const PhoneIcon = () => BiPhone({ className: "text-xl text-purple-500" });
 export const FileIcon = () => BsFileEarmarkText({ className: "text-xl text-purple-500" });
 export const HistoryIcon = () => BiHistory({ className: "text-xl text-purple-500" });
+export const ActionsIcon = () => AiFillTool({ className: "text-xl text-purple-500" });
 export const MoneyIcon = () => BiMoney({ className: "text-xl text-purple-500" });
 export const KeyIcon = () => BsKey({ className: "text-xl text-purple-500" });
 export const LogoutIcon = () => IoIosLogOut({ className: "text-xl text-purple-500" });

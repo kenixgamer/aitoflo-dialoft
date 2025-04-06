@@ -15,6 +15,7 @@ import PrivacyPolicy from './pages/policies/PrivacyPolicy.tsx';
 import AIAssistantConfig from './components/Assistant/NewAssistantDetails/AIAssistantConfig.tsx';
 import Billing from './pages/dashboard/Billing.tsx';
 import HelpBox from './pages/support/HelpBox.tsx';
+import ToolList from './components/Tool/ToolList.tsx';
 
 const App = () => {
   return (
@@ -29,6 +30,7 @@ const App = () => {
         <Route path='billing' element={<Billing/>}></Route>
         <Route path='agents/:assistantId' element={<AIAssistantConfig/>}></Route>
         <Route path='support' element={<HelpBox/>}></Route>
+      <Route path='actions' element={<ToolList />}></Route>
       </Route>
         <Route path='/' element={<HomePage/>}></Route>
       <Route path='pricing' element={<PricingPage/>}></Route>

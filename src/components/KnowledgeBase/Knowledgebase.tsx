@@ -59,7 +59,6 @@ const Knowledgebase = () => {
       setIsUploadDialogOpen(false);
       setFiles([]);
     } catch (error) {
-      console.log(error);
     }finally{
       setIsUploading(false);
     }

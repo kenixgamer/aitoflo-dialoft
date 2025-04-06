@@ -19,6 +19,7 @@ import {
   LogoutIcon,
   MoneyIcon,
   HelpIcon,
+  ActionsIcon,
 } from "@/utils/icons/icons";
 import { capitalizeFirstLetter } from "@/utils";
 
@@ -57,6 +58,7 @@ const DashboardSideBar = () => {
     { name: "Knowledge Base", icon: <BookIcon />, path: "knowledgebase" },
     { name: "Phone Numbers", icon: <PhoneIcon />, path: "phone-numbers" },
     { name: "Batch Call", icon: <FileIcon />, path: "batch-call" },
+    { name: "Actions", icon: <ActionsIcon />, path: "actions" },
     { name: "Call History", icon: <HistoryIcon />, path: "call-history" },
     { name: "Billing", icon: <MoneyIcon />, path: "billing" },
   ];

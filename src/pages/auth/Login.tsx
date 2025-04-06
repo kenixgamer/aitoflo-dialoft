@@ -26,7 +26,6 @@ const Login = () => {
       })
     } catch (error) {
       // Add proper error handling with user feedback
-      console.log("Error happened at login", error);
     }
   };
 

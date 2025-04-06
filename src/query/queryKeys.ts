@@ -14,5 +14,7 @@ export enum QUERY_KEYS {
     "CALL_DETAILS" = "call-details",
     "BATCH_CALL_ANALYTICS" = "batch-call-analytics",
     "GOHIGHLEVEL_SHEETS" = "gohighlevel-sheets",
-    "GOHIGHLEVEL_CONTACTS" = "gohighlevel-contacts"
+    "GOHIGHLEVEL_CONTACTS" = "gohighlevel-contacts",
+    "TOOL" = "tool",
+    "TOOL_LISTS" = "tool-lists"
 }
