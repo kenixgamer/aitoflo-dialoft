@@ -25,6 +25,12 @@ import {
 import { useParams } from "react-router-dom";
 import Spinner from "../ui/loader";
 import { PlusIconAlt, TrashIconAlt } from "@/utils/icons/icons";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip"
 
 interface ToolFormProps {
   open: boolean;
@@ -224,7 +230,7 @@ const ToolForm: React.FC<ToolFormProps> = ({
       messages: [],
     });
     onOpenChange(false);
-  }
+  };
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setNameError("");
@@ -245,7 +251,9 @@ const ToolForm: React.FC<ToolFormProps> = ({
 
     // Validate timingMilliseconds for request-response-delayed messages
     const invalidTiming = formData.messages.some(
-      (msg) => msg.type === "request-response-delayed" && (msg.timingMilliseconds || 0) < 100
+      (msg) =>
+        msg.type === "request-response-delayed" &&
+        (msg.timingMilliseconds || 0) < 100
     );
     if (invalidTiming) {
       setNameError("Timing milliseconds must not be less than 100");
@@ -278,7 +286,7 @@ const ToolForm: React.FC<ToolFormProps> = ({
     if (isEditing && toolData?.id) {
       await updateFunctionTool(backendData).then(() => {
         // Reset form data to initial state instead of null
-       resetForm();
+        resetForm();
       });
     } else {
       await creataFunctionTool(backendData).then(() => {
@@ -286,7 +294,6 @@ const ToolForm: React.FC<ToolFormProps> = ({
         resetForm();
       });
     }
-
   };
 
   const handleInputChange = (
@@ -362,12 +369,14 @@ const ToolForm: React.FC<ToolFormProps> = ({
                       }
                       className="bg-zinc-800 data-[state=checked]:bg-purple-600"
                     />
-                    <Label
-                      htmlFor="async"
-                      className="text-white text-sm font-medium"
-                    >
-                      Async
-                    </Label>
+                      <TooltipProvider>
+                      <Tooltip>
+                        <TooltipTrigger className="text-white">Async</TooltipTrigger>
+                        <TooltipContent>
+                          <p className="text-white">Tool executes asynchronously</p>
+                        </TooltipContent>
+                      </Tooltip>
+                    </TooltipProvider>
                   </div>
                   <div className="flex items-center space-x-3">
                     <Switch
@@ -378,12 +387,14 @@ const ToolForm: React.FC<ToolFormProps> = ({
                       }
                       className="bg-zinc-800 data-[state=checked]:bg-purple-600"
                     />
-                    <Label
-                      htmlFor="strict"
-                      className="text-white text-sm font-medium"
-                    >
-                      Strict
-                    </Label>
+                    <TooltipProvider>
+                      <Tooltip>
+                        <TooltipTrigger className="text-white">Strict</TooltipTrigger>
+                        <TooltipContent>
+                          <p className="text-white">Enforces strict parameter validation</p>
+                        </TooltipContent>
+                      </Tooltip>
+                    </TooltipProvider>
                   </div>
                 </div>
               </div>
@@ -507,7 +518,10 @@ const ToolForm: React.FC<ToolFormProps> = ({
                       />
                     </div>
                     <div className="col-span-1 flex items-center justify-center">
-                      <Switch
+                        <TooltipProvider>
+                      <Tooltip>
+                        <TooltipTrigger className="text-white">
+                        <Switch
                         checked={param.required}
                         onCheckedChange={(checked) => {
                           const newParams = [...formData.parameters];
@@ -531,6 +545,12 @@ const ToolForm: React.FC<ToolFormProps> = ({
                         }}
                         className="bg-zinc-800 data-[state=checked]:bg-purple-600"
                       />
+                        </TooltipTrigger>
+                        <TooltipContent>
+                          <p className="text-white">Required</p>
+                        </TooltipContent>
+                      </Tooltip>
+                    </TooltipProvider>
                     </div>
                     <div className="col-span-1 flex items-center justify-center">
                       <Button
@@ -608,10 +628,12 @@ const ToolForm: React.FC<ToolFormProps> = ({
                       id="timeout"
                       type="number"
                       placeholder="20"
+                      min={1}
+                      max={120}
                       className="bg-zinc-900 border-zinc-800 text-white focus:border-zinc-700 focus-visible:ring-1 focus-visible:ring-zinc-700 h-10"
                       value={formData.timeout}
                       onChange={(e) =>
-                        handleInputChange("timeout", parseInt(e.target.value))
+                        handleInputChange("timeout", Math.min(parseInt(e.target.value),120))
                       }
                     />
                   </div>
@@ -897,8 +919,10 @@ const ToolForm: React.FC<ToolFormProps> = ({
                           value={message.timingMilliseconds || 0}
                           onChange={(e) => {
                             const newMessages = [...formData.messages];
-                            newMessages[index].timingMilliseconds =
-                              Math.max(100, parseInt(e.target.value) || 100);
+                            newMessages[index].timingMilliseconds = Math.min(Math.max(
+                              100,
+                              parseInt(e.target.value) || 100
+                            ),120000)
                             setFormData((prev) => ({
                               ...prev,
                               messages: newMessages,

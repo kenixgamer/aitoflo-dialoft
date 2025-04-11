@@ -43,16 +43,14 @@ const ToolList = () => {
   const { mutateAsync: deleteTool } = useDeleteTool();
   const [toolId, setToolId] = useState("");
   const [toolData, setToolData] = useState<any>(null);
-  const { data: toolDetailsData, isFetching : isFetchingToolDetails } = useGetTool(toolId);
+  const { data: toolDetailsData, isFetching : isFetchingToolDetails, refetch : refetchToolDetails } = useGetTool(toolId);
   const [isEditing,setIsEditing] = useState(false);
   
   const handleNavigateOfColumn = async (toolId: any) => {
     setToolId(toolId);
-    // The query will automatically run when toolId changes
-    // No need to manually call refetch
+    await refetchToolDetails();
+    setShowAlertDialog(true);
   };
-
-  // Use an effect to update toolData when toolDetailsData changes
 
   const handleHeaderButtonClick = () => {
     setIsEditing(false);
@@ -69,7 +67,6 @@ const ToolList = () => {
 
   return (
     <div className="flex h-full flex-col">
-      { toolData?.id }
       <SearchHeader
         headerIcon={<ActionsIcon />}
         textValue={searchTerm}

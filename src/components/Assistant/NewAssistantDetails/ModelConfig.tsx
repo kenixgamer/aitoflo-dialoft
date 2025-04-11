@@ -9,12 +9,15 @@ import { Button } from '@/components/ui/button'
 import { X } from 'lucide-react'
 import { Input } from '@/components/ui/input'
 import { useGetDocuments } from '@/query/knowledgebase.queries'
+import { useGetTools } from '@/query/tool.queries'
 
 export default function ModelConfig({ formData, setFormData }: any) {
   const { workshopId } = useParams();
   if (!workshopId) return null;
   const [selectedFile] = useState("");
+  const [selectedAction] = useState("");
   const {data : knowledgeBase} = useGetDocuments(workshopId,"",1,1000,"");
+  const { data: actions } = useGetTools(workshopId, 1, "", 1000, "");
   if (!workshopId) return null;
   const handleKnowledgeBaseChange = (value: string) => {
     // Check if knowledgebaseIds exists, if not initialize it
@@ -29,6 +32,16 @@ export default function ModelConfig({ formData, setFormData }: any) {
       });
     }
   };
+  const handleActionChange = (value: string) => {
+    const toolIds = formData.toolIds || [];
+    // Check if the id is already in the array
+    if (!toolIds.includes(value)) {
+      setFormData({
+        ...formData,
+        toolIds: [...toolIds, value]
+      });
+    }
+  };
   
   const handleRemoveKnowledgebase = (value: string) => {
     // Filter out the id to remove
@@ -40,8 +53,21 @@ export default function ModelConfig({ formData, setFormData }: any) {
       knowledgebaseIds: updatedIds
     });
   };
+  const handleRemoveAction = (value: string) => {
+    // Filter out the id to remove
+    const updatedIds = formData.toolIds.filter((id: string) => id !== value);
+    
+    // Update formData with the new array
+    setFormData({
+      ...formData,
+      toolIds: updatedIds
+    });
+  };
   return (
-    <div className="grid grid-cols-10 gap-6">
+    <div className="grid grid-cols-10 gap-6"> 
+    {/* <div className='text-white'>
+    { JSON.stringify(actions?.tools) }
+    </div> */}
       <div className="col-span-7 space-y-6">
         <Card className="bg-black border-zinc-800">
           <CardHeader>
@@ -180,6 +206,51 @@ export default function ModelConfig({ formData, setFormData }: any) {
                       variant="ghost"
                       size="sm"
                       onClick={() => handleRemoveKnowledgebase(id)}
+                      className="text-gray-400 hover:text-white"
+                    >
+                      <X className="h-4 w-4" />
+                    </Button>
+                  </div>
+                );
+              })}
+            </div>
+          </CardContent>
+        </Card>
+        <Card className="bg-black border-zinc-800">
+          <CardHeader>
+            <CardTitle className="text-xl font-semibold text-white">Actions</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <div className="space-y-2">
+              <Label htmlFor="knowledgeBase" className="text-sm font-medium text-gray-300">Select Action</Label>
+              <Select
+                value={selectedAction}
+                onValueChange={handleActionChange}
+              >
+                <SelectTrigger id="action" className="bg-zinc-900 border-zinc-800 text-white">
+                  <SelectValue placeholder="Select a action" />
+                </SelectTrigger>
+                <SelectContent className="bg-zinc-900 border-zinc-800">
+                 {
+                  actions?.tools?.map((action: any) => (
+                    <SelectItem key={action.toolId} value={action.toolId} className="text-white hover:bg-zinc-800">
+                      {action?.name}
+                    </SelectItem> 
+                  ))
+                 }
+                </SelectContent>
+              </Select>
+            </div>
+            <div className="space-y-2">
+              {formData.toolIds?.map((id: string) => {
+                const doc = actions?.tools?.find((d: any) => d.toolId === id);
+                return doc && (
+                  <div key={id} className="flex items-center justify-between bg-black p-2 rounded">
+                    <span className="truncate text-sm text-white">{doc.name}</span>
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      onClick={() => handleRemoveAction(doc.toolId)}
                       className="text-gray-400 hover:text-white"
                     >
                       <X className="h-4 w-4" />
