@@ -351,7 +351,7 @@ export default function ActionConfig({ formData, setFormData }: any) {
 
             <div className="space-y-2">
               {formData?.toolIds?.map((tool: string) => (
-                <div
+               (tool == CHECK_CALENDAR_AVAILABILITY_TOOL_ID || tool == BOOK_APPOINTMENT_TOOL_ID) ? (<div
                   key={tool}
                   className="flex items-center justify-between bg-zinc-900 p-3 rounded-lg border border-zinc-800"
                 >
@@ -381,7 +381,7 @@ export default function ActionConfig({ formData, setFormData }: any) {
                       <Trash2 className="w-4 h-4" />
                     </Button>
                   </div>
-                </div>
+                </div>) : null
               ))}
             </div>
           </div>
