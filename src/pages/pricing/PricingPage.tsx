@@ -167,7 +167,7 @@ const PricingPage = () => {
     'Automated booking and scheduling on calls',
     'Automated SMS sending on calls',
     'Unlimited AI assistants',
-    'Dialoft Academy access',
+                  'Aitoflo Academy access',
     'Batch calling capabilities',
     'Call recording and transcription',
     'Call summaries',
@@ -392,7 +392,7 @@ const PricingPage = () => {
             </div>
             <div className="flex gap-4 items-center justify-center w-full mt-8">
               <Button variant="secondary" className="bg-purple-100 text-purple-950 hover:bg-purple-200 px-8 py-6 text-base font-medium min-w-[200px] cursor-pointer">
-              <a href="https://cal.com/dialoftai/demo" target="_blank" rel="noopener noreferrer">
+              <a href="https://calendly.com/gurleen-aitoflo/introduction-to-aitoflo-1?month=2025-07" target="_blank" rel="noopener noreferrer">
                 Schedule Demo
               </a>
               </Button>

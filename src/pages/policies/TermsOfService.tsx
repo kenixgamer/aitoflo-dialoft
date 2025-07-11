@@ -9,16 +9,16 @@ const TermsOfService = () => {
   return (
     <>
       <Helmet>
-        <title>Terms of Service - Dialoft AI</title>
-        <meta name="description" content="Terms of Service for Dialoft AI" />
+        <title>Terms of Service - Aitoflo</title>
+        <meta name="description" content="Terms of Service for Aitoflo" />
       </Helmet>
       <div className="min-h-screen bg-black text-white p-8 md:p-16">
         <div className="max-w-4xl mx-auto space-y-8">
-          <h1 className="text-3xl font-bold mb-8">Terms of Service - Dialoft AI</h1>
+          <h1 className="text-3xl font-bold mb-8">Terms of Service - Aitoflo</h1>
           <p className="text-gray-400 mb-4">Last Updated: January 2, 2025</p>
 
           <p className="mb-6">
-            This Agreement is between Dialoft AI (Owner of Dialoft AI) and the person (natural or legal) accessing or using the Product. These Terms of Service ("Terms") constitute an agreement between Dialoft AI ("Dialoft AI," "we," "us") and you, governing your use of the Site and services (as defined below) offered by Dialoft AI. By signing up, accessing, or using the Product, you acknowledge your acceptance of this Agreement and consent to be bound by its terms and conditions.
+            This Agreement is between Aitoflo (Owner of Aitoflo) and the person (natural or legal) accessing or using the Product. These Terms of Service ("Terms") constitute an agreement between Aitoflo ("Aitoflo," "we," "us") and you, governing your use of the Site and services (as defined below) offered by Aitoflo. By signing up, accessing, or using the Product, you acknowledge your acceptance of this Agreement and consent to be bound by its terms and conditions.
           </p>
           <p className="mb-6">
             If you are accessing or using the Product on behalf of your company, you certify that you have the authority to accept this Agreement on behalf of your firm. Do not use the Site if you do not agree to these Terms or if your jurisdiction does not honor them. Persons under the age of 13 are not authorized to use the Site.
@@ -26,7 +26,7 @@ const TermsOfService = () => {
 
           <section className="mb-8">
             <h2 className="text-2xl font-semibold mb-4">1. Overview of Services</h2>
-            <p className="mb-4">Dialoft AI is a SaaS platform providing AI-driven telecalling solutions. These services include:</p>
+            <p className="mb-4">Aitoflo is a SaaS platform providing AI-driven telecalling solutions. These services include:</p>
             <ul className="list-disc pl-6 space-y-2">
               <li>Outbound Calling Services: Automated AI-powered outbound calls for various purposes, such as customer engagement, reminders, and lead generation.</li>
               <li>Inbound Calling Services: AI-powered virtual agents to handle incoming calls and queries.</li>
@@ -40,15 +40,15 @@ const TermsOfService = () => {
             <div className="space-y-4">
               <div>
                 <h3 className="text-xl font-semibold mb-2">2.1 Cloud Service Fees</h3>
-                <p>The pricing for Dialoft AI services is available on the official pricing page. Users will be billed based on the plan selected during account setup and the actual usage within each subscription period.</p>
+                <p>The pricing for Aitoflo services is available on the official pricing page. Users will be billed based on the plan selected during account setup and the actual usage within each subscription period.</p>
               </div>
               <div>
                 <h3 className="text-xl font-semibold mb-2">2.2 Payment Terms</h3>
-                <p>If an automatic payment method fails, Dialoft AI will issue an invoice due within 14 days. A 7-day grace period will follow if the invoice remains unpaid. Failure to pay within the grace period may result in service suspension until payment is received. Persistent non-payment may lead to termination of services.</p>
+                <p>If an automatic payment method fails, Aitoflo will issue an invoice due within 14 days. A 7-day grace period will follow if the invoice remains unpaid. Failure to pay within the grace period may result in service suspension until payment is received. Persistent non-payment may lead to termination of services.</p>
               </div>
               <div>
                 <h3 className="text-xl font-semibold mb-2">2.3 Price Adjustments</h3>
-                <p>Dialoft AI reserves the right to adjust pricing by providing at least seven (7) days' notice via email or the platform. New pricing will take effect at the start of the next subscription period.</p>
+                <p>Aitoflo reserves the right to adjust pricing by providing at least seven (7) days' notice via email or the platform. New pricing will take effect at the start of the next subscription period.</p>
               </div>
             </div>
           </section>
@@ -60,7 +60,7 @@ const TermsOfService = () => {
               <li>Effective Date: The date the Customer first accepts this Agreement.</li>
               <li>Invoice Period: Monthly.</li>
               <li>Payment Period: One day from the date of invoice.</li>
-              <li>Provider: Dialoft AI</li>
+              <li>Provider: Aitoflo</li>
               <li>Subscription Start Date: Date of account creation.</li>
               <li>Subscription Period: Depend on which pricing plan you select.</li>
               <li>Non-Renewal Notice Period: A minimum of 30 days before the current subscription period ends.</li>
@@ -72,7 +72,7 @@ const TermsOfService = () => {
             <div className="space-y-6">
               <div>
                 <h3 className="text-xl font-semibold mb-2">4.1 General Use</h3>
-                <p className="mb-4">Dialoft AI's Acceptable Use Policy aims to prevent misuse, ensure compliance with applicable laws, and protect the integrity of its systems and services. Any action that disrupts these systems or violates laws is strictly prohibited.</p>
+                <p className="mb-4">Aitoflo's Acceptable Use Policy aims to prevent misuse, ensure compliance with applicable laws, and protect the integrity of its systems and services. Any action that disrupts these systems or violates laws is strictly prohibited.</p>
                 <p>Users agree not to use the services for activities that:</p>
                 <ul className="list-disc pl-6 space-y-1">
                   <li>Violate any laws or regulations.</li>
@@ -117,11 +117,11 @@ const TermsOfService = () => {
                   </div>
 
                   <p className="mb-6">
-                    Customers using Dialoft AI must scrub phone numbers against the applicable federal, state, and Customer-specific Do-Not-Call (DNC) lists regularly, and in no event less frequently than every 31 days.
+                    Customers using Aitoflo must scrub phone numbers against the applicable federal, state, and Customer-specific Do-Not-Call (DNC) lists regularly, and in no event less frequently than every 31 days.
                   </p>
                   
                   <p className="mb-6">
-                    If consumer consent is required under applicable laws to place calls using Dialoft AI, Customers must document proof of the required level of consent for each consumer they contact. Such documentation must be preserved for at least the minimum amount of time prescribed by applicable law, but in no case less than five years. Dialoft AI retains the right to audit your use of our Services to ensure compliance with the applicable laws.
+                    If consumer consent is required under applicable laws to place calls using Aitoflo, Customers must document proof of the required level of consent for each consumer they contact. Such documentation must be preserved for at least the minimum amount of time prescribed by applicable law, but in no case less than five years. Aitoflo retains the right to audit your use of our Services to ensure compliance with the applicable laws.
                   </p>
 
                   <div className="mb-6">
@@ -148,12 +148,12 @@ const TermsOfService = () => {
                   </div>
 
                   <p className="mb-6">
-                    Customers are solely responsible for ensuring compliance with these laws and must consult legal professionals where necessary. Dialoft AI does not assume responsibility for ensuring Customer compliance but retains the right to audit your use of our Services.
+                    Customers are solely responsible for ensuring compliance with these laws and must consult legal professionals where necessary. Aitoflo does not assume responsibility for ensuring Customer compliance but retains the right to audit your use of our Services.
                   </p>
 
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold mb-3">Global Compliance Responsibilities</h4>
-                    <p className="mb-4">By using Dialoft AI, you agree to:</p>
+                    <p className="mb-4">By using Aitoflo, you agree to:</p>
                     <ol className="list-decimal pl-6 space-y-2">
                       <li>Abide by all applicable telemarketing, AI usage, and data privacy laws in the regions where you operate.</li>
                       <li>Obtain, document, and maintain proper consent from consumers before making calls or sending texts.</li>
@@ -164,13 +164,13 @@ const TermsOfService = () => {
                   </div>
 
                   <p className="mb-6">
-                    Dialoft AI retains the right to review your activities on the platform to ensure compliance with all relevant laws and regulations. Any violations of these terms may result in the suspension or termination of your account without prior notice.
+                    Aitoflo retains the right to review your activities on the platform to ensure compliance with all relevant laws and regulations. Any violations of these terms may result in the suspension or termination of your account without prior notice.
                   </p>
 
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold mb-3">Important Notice</h4>
                     <p>
-                      The laws and regulations mentioned above are not exhaustive, and Customers are solely responsible for compliance with the laws applicable in their regions. Dialoft AI strongly recommends consulting a qualified legal professional to ensure compliance with all relevant telemarketing, AI, and data privacy laws.
+                      The laws and regulations mentioned above are not exhaustive, and Customers are solely responsible for compliance with the laws applicable in their regions. Aitoflo strongly recommends consulting a qualified legal professional to ensure compliance with all relevant telemarketing, AI, and data privacy laws.
                     </p>
                   </div>
                 </div>
@@ -188,7 +188,7 @@ const TermsOfService = () => {
 
               <div>
                 <h3 className="text-xl font-semibold mb-2">4.5 Termination for Violations</h3>
-                <p>Dialoft AI reserves the right to terminate services for violations of the Acceptable Use Policy at its sole discretion.</p>
+                <p>Aitoflo reserves the right to terminate services for violations of the Acceptable Use Policy at its sole discretion.</p>
               </div>
             </div>
           </section>
@@ -201,7 +201,7 @@ const TermsOfService = () => {
 
           <section className="mb-8">
             <h2 className="text-2xl font-semibold mb-4">6. Indemnification</h2>
-            <p className="mb-4">You agree to indemnify, defend, and hold harmless Dialoft AI, its officers, employees, and affiliates from claims, damages, or expenses arising from:</p>
+            <p className="mb-4">You agree to indemnify, defend, and hold harmless Aitoflo, its officers, employees, and affiliates from claims, damages, or expenses arising from:</p>
             <ul className="list-disc pl-6 space-y-2">
               <li>Your use or inability to use the services.</li>
               <li>Violations of these Terms.</li>
@@ -211,21 +211,21 @@ const TermsOfService = () => {
 
           <section className="mb-8">
             <h2 className="text-2xl font-semibold mb-4">7. Warranty Disclaimer</h2>
-            <p>Services are provided "as is" without warranties of any kind, either express or implied. Dialoft AI does not guarantee uninterrupted, error-free service and disclaims liability for data loss, delays, or service interruptions.</p>
+            <p>Services are provided "as is" without warranties of any kind, either express or implied. Aitoflo does not guarantee uninterrupted, error-free service and disclaims liability for data loss, delays, or service interruptions.</p>
           </section>
 
           <section className="mb-8">
             <h2 className="text-2xl font-semibold mb-4">8. Limitation of Liability</h2>
-            <p>Dialoft AI's liability is limited to the amount paid for the service that caused the claim during the 12 months preceding the claim or $50, whichever is greater. This limitation applies to the maximum extent permitted by law.</p>
+            <p>Aitoflo's liability is limited to the amount paid for the service that caused the claim during the 12 months preceding the claim or $50, whichever is greater. This limitation applies to the maximum extent permitted by law.</p>
           </section>
 
           <section className="mb-8">
             <h2 className="text-2xl font-semibold mb-4">9. Amendments and Termination</h2>
-            <p>Dialoft AI reserves the right to amend these Terms at any time by providing notice via email or the platform. Continued use of the services after amendments constitutes acceptance.</p>
+            <p>Aitoflo reserves the right to amend these Terms at any time by providing notice via email or the platform. Continued use of the services after amendments constitutes acceptance.</p>
           </section>
 
           <section className="mt-12 border-t pt-8 text-gray-400">
-            <p>For any questions or concerns regarding these Terms, please contact us at support@dialoftai.com</p>
+            <p>For any questions or concerns regarding these Terms, please contact us at support@aitoflo.com</p>
           </section>
         </div>
       </div>

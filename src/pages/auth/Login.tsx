@@ -2,7 +2,7 @@ import { GoogleOAuthProvider, GoogleLogin } from "@react-oauth/google";
 import { login } from "../../service/user.service";
 import { useContext } from "react";
 import { UserContext } from "../../context";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useToast } from "@/hooks/use-toast";
 
 const Login = () => {
@@ -46,7 +46,7 @@ const Login = () => {
                 </div>
               </div>
               <div>
-                <h1 className="text-2xl font-bold text-white">Welcome to DialoftAI</h1>
+                <h1 className="text-2xl font-bold text-white">Welcome to Aitoflo</h1>
                 <p className="text-zinc-400 mt-2">Sign in to your account to continue</p>
               </div>
             </div>
@@ -77,7 +77,7 @@ const Login = () => {
             </div>
 
             {/* Footer Text */}
-            <p className="text-center text-sm text-zinc-400 mt-8">
+            {/* <p className="text-center text-sm text-zinc-400 mt-8">
               By signing in, you agree to our{" "}
               <Link to='/terms-of-service' className="text-purple-500 hover:text-purple-400 transition-colors">
                 Terms of Service
@@ -86,7 +86,7 @@ const Login = () => {
               <Link to="/privacy-policy" className="text-purple-500 hover:text-purple-400 transition-colors">
                 Privacy Policy
               </Link>
-            </p>
+            </p> */}
           </div>
         </div>
       </div>

@@ -8,17 +8,17 @@ const PrivacyPolicy = () => {
   return (
     <>
       <Helmet>
-        <title>Privacy Policy - Dialoft AI</title>
-        <meta name="description" content="Privacy Policy for Dialoft AI" />
+        <title>Privacy Policy - Aitoflo</title>
+        <meta name="description" content="Privacy Policy for Aitoflo" />
       </Helmet>
       <div className="min-h-screen bg-black text-white p-8 md:p-16">
         <div className="max-w-4xl mx-auto space-y-8">
-          <h1 className="text-3xl font-bold mb-4">Privacy Policy - Dialoft AI</h1>
+          <h1 className="text-3xl font-bold mb-4">Privacy Policy - Aitoflo</h1>
           <p className="text-gray-400 mb-4">Last Updated: January 2, 2025</p>
 
           <section className="space-y-6">
             <p className="text-gray-300">
-              This Statement of Privacy applies to Dialoft AI and governs data collection and usage. For the purposes of this Privacy Policy, unless otherwise noted, all references to Dialoft AI include www.dialoftai.com and Dialoft AI. The Dialoft AI application is an AI-powered telecalling application. By using the Dialoft AI application, you consent to the data practices described in this statement.
+              This Statement of Privacy applies to Aitoflo and governs data collection and usage. For the purposes of this Privacy Policy, unless otherwise noted, all references to Aitoflo include www.aitoflo.com and Aitoflo. The Aitoflo application is an AI-powered telecalling application. By using the Aitoflo application, you consent to the data practices described in this statement.
             </p>
 
             <div className="space-y-6">
@@ -30,7 +30,7 @@ const PrivacyPolicy = () => {
               <div className="space-y-4">
                 <h3 className="text-xl font-semibold">1. Personal Data</h3>
                 <p className="text-gray-300">
-                  To better provide you with products and services, Dialoft AI may ask you to provide certain personally identifiable information ("Personal Data") that can be used to contact or identify you. These may include, but are not limited to:
+                  To better provide you with products and services, Aitoflo may ask you to provide certain personally identifiable information ("Personal Data") that can be used to contact or identify you. These may include, but are not limited to:
                 </p>
                 <ul className="list-disc pl-6 text-gray-300 space-y-2">
                   <li>Email address</li>
@@ -103,7 +103,7 @@ const PrivacyPolicy = () => {
 
               <div className="space-y-4">
                 <h2 className="text-2xl font-semibold">Use of Data</h2>
-                <p className="text-gray-300">Dialoft AI uses collected data for the following purposes:</p>
+                <p className="text-gray-300">Aitoflo uses collected data for the following purposes:</p>
                 <ul className="list-disc pl-6 text-gray-300 space-y-2">
                   <li>Providing and maintaining the Service</li>
                   <li>Notifying you about changes to the Service</li>
@@ -142,13 +142,13 @@ const PrivacyPolicy = () => {
               <div className="space-y-4">
                 <h2 className="text-2xl font-semibold">Disclosure of Data</h2>
                 <p className="text-gray-300">
-                  Dialoft AI may disclose personal data under the following conditions:
+                  Aitoflo may disclose personal data under the following conditions:
                 </p>
                 <ul className="list-disc pl-6 text-gray-300 space-y-2">
                   <li>Compliance with legal obligations or valid requests by public authorities</li>
                   <li>Merger, acquisition, or asset sale where Personal Data may be transferred</li>
                   <li>Disclosure to affiliates, subsidiaries, or trusted partners for legitimate purposes</li>
-                  <li>Protecting the rights, property, or safety of Dialoft AI, users, or others</li>
+                                      <li>Protecting the rights, property, or safety of Aitoflo, users, or others</li>
                 </ul>
               </div>
 
@@ -162,7 +162,7 @@ const PrivacyPolicy = () => {
               <div className="space-y-4">
                 <h2 className="text-2xl font-semibold">E-mail Communications</h2>
                 <p className="text-gray-300">
-                  Dialoft AI may send you emails for announcements, promotions, or updates. To stop receiving these communications, click "unsubscribe" or email us directly.
+                  Aitoflo may send you emails for announcements, promotions, or updates. To stop receiving these communications, click "unsubscribe" or email us directly.
                 </p>
               </div>
 
@@ -178,7 +178,7 @@ const PrivacyPolicy = () => {
                   <li>Withdrawal of consent where applicable</li>
                   <li>Complaint to a Data Protection Authority</li>
                 </ul>
-                <p className="text-gray-300">For inquiries, contact us at support@dialoftai.com.</p>
+                <p className="text-gray-300">For inquiries, contact us at support@aitoflo.com.</p>
 
                 <h3 className="text-xl font-semibold mt-4">2. California Consumer Privacy Act (CCPA)</h3>
                 <p className="text-gray-300">
@@ -189,7 +189,7 @@ const PrivacyPolicy = () => {
                   <li>Deletion of your personal information</li>
                   <li>Opt-out of data sale (if applicable)</li>
                 </ul>
-                <p className="text-gray-300">To exercise these rights, email us at support@dialoftai.com.</p>
+                <p className="text-gray-300">To exercise these rights, email us at support@aitoflo.com.</p>
               </div>
 
               <div className="space-y-4">
@@ -214,7 +214,7 @@ const PrivacyPolicy = () => {
               </div>
 
               <div className="mt-8 text-gray-400">
-                <p>For questions or concerns, contact us at support@dialoftai.com</p>
+                <p>For questions or concerns, contact us at support@aitoflo.com</p>
               </div>
             </div>
           </section>

@@ -78,7 +78,7 @@ const DashboardSideBar = () => {
               alt="logo"
               className="w-10 h-10 object-contain"
             />
-            <div className="font-bold text-lg">Dialoft Ai</div>
+                          <div className="font-bold text-lg">Aitoflo</div>
           </div>
             <WorkShopLists />
 
@@ -128,8 +128,9 @@ const DashboardSideBar = () => {
                   readOnly
                 />
               </div>
-              <Link
-                to="/pricing"
+              <a
+                href="https://calendly.com/gurleen-aitoflo/introduction-to-aitoflo-1?month=2025-07"
+                target="_blank"
                 className="mt-2 w-full inline-flex items-center justify-center bg-purple-600 hover:bg-purple-700 text-white rounded-md px-4 py-2 shadow-[0_0_10px_rgba(147,51,234,0.3)]"
               >
                 <svg
@@ -147,7 +148,7 @@ const DashboardSideBar = () => {
                   <path d="M19 5c-1.5 0-2.8 1.4-3 2-3.5-1.5-11-.3-11 5 0 1.8 0 3 2 4.5V20h4v-2h3v2h4v-4c1-.5 1.7-1 2-2h2v-4h-2c0-1-.5-1.5-1-2h0V5z" />
                 </svg>
                 Upgrade Plan
-              </Link>
+              </a>
             </div>
 
             {/* User Info - Moved to bottom */}
@@ -155,7 +156,7 @@ const DashboardSideBar = () => {
               <img
                 src={user.picture}
                 onError={(e) => (e.currentTarget.src = "/logo.jpg")}
-                className="w-8 h-8 rounded-full"
+                className="w-8 h-8 rounded-full object-contain"
               />
               <span className="truncate text-sm">{user?.email}</span>
               <div className="relative ml-auto h-5 w-5">

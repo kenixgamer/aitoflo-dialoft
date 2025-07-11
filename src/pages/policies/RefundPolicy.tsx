@@ -4,14 +4,14 @@ const RefundPolicy = () => {
   return (
     <>
       <Helmet>
-        <title>Billing & Refunds Policy - Dialoft AI</title>
-        <meta name="description" content="Billing and Refund Policy for Dialoft AI" />
+        <title>Billing & Refunds Policy - Aitoflo</title>
+        <meta name="description" content="Billing and Refund Policy for Aitoflo" />
       </Helmet>
       <div className="min-h-screen bg-black text-white p-8 md:p-16">
         <div className="max-w-4xl mx-auto space-y-8">
           <h1 className="text-3xl font-bold mb-8">Billing & Refunds Policy</h1>
           <p className="text-gray-400 mb-8">
-            At Dialoft AI, we strive to provide the best value and service for our customers. Please carefully review our billing and refund policies outlined below:
+            At Aitoflo, we strive to provide the best value and service for our customers. Please carefully review our billing and refund policies outlined below:
           </p>
 
           <section className="mb-8">
@@ -26,7 +26,7 @@ const RefundPolicy = () => {
           {/* Add sections 2-4 with similar structure */}
           
           <section className="mt-12">
-            <p>If you have questions or concerns regarding billing, please contact our support team at support@dialoft.com</p>
+            <p>If you have questions or concerns regarding billing, please contact our support team at support@aitoflo.com</p>
           </section>
         </div>
       </div>
