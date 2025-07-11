@@ -73,11 +73,11 @@ const DashboardSideBar = () => {
           <div className="flex flex-col space-y-2">
             {/* Logo */}
           <div className="flex items-center pl-2 gap-4 mb-2 mt-4 justify-start">
-            <img
+            {/* <img
               src="/logo.jpg"
               alt="logo"
               className="w-10 h-10 object-contain"
-            />
+            /> */}
                           <div className="font-bold text-lg">Aitoflo</div>
           </div>
             <WorkShopLists />
