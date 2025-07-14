@@ -15,38 +15,17 @@ export const VOICES: Voice[] = [
       gender: "Female"
     },
     {
-      id: "9BWtsMlNqrJLrRacOk9x",
-      name: "Aria",
-      tone: "Expressive",
+      id: "FGY2WhTYpPnrIDTdsKH5",
+      name: "Laura",
+      tone: "Upbeat",
       accent: "American",
       gender: "Female"
-    },
-    {
-      id: "pqHfZKP7SCvOlQyINhV4",
-      name: "Bill",
-      tone: "Trustworthy",
-      accent: "American",
-      gender: "Male"
-    },
-    {
-      id: "nPczCizl2devNBz1zOrb",
-      name: "Brian",
-      tone: "Deep",
-      accent: "American",
-      gender: "Male"
     },
     {
       id: "N2lVS1w4EtoT3dr4eOWO",
       name: "Callum",
       tone: "Intense",
       accent: "Transatlantic",
-      gender: "Male"
-    },
-    {
-      id: "lKne3meq5aSn9XLyUdCD",
-      name: "Charlie",
-      tone: "Natural",
-      accent: "Australian",
       gender: "Male"
     },
     {
@@ -71,30 +50,9 @@ export const VOICES: Voice[] = [
       gender: "Male"
     },
     {
-      id: "cjVigY5qzO86HufOOWal",
-      name: "Eric",
-      tone: "Friendly",
-      accent: "American",
-      gender: "Male"
-    },
-    {
-      id: "JBFqnCJSsd6RMNDVRZzb",
-      name: "George",
-      tone: "Warm",
-      accent: "British",
-      gender: "Male"
-    },
-    {
       id: "cgSgspJ2msm6clMCkdW9",
       name: "Jessica",
       tone: "Expressive",
-      accent: "American",
-      gender: "Female"
-    },
-    {
-      id: "FGY2WhTYpPnrIDTdsKH5",
-      name: "Laura",
-      tone: "Upbeat",
       accent: "American",
       gender: "Female"
     },
@@ -113,13 +71,6 @@ export const VOICES: Voice[] = [
       gender: "Female"
     },
     {
-      id: "XrExE9yKlg1WjnnIVkGX",
-      name: "Metilda",
-      tone: "Friendly",
-      accent: "American",
-      gender: "Female"
-    },
-    {
       id: "SAz9YHcvj6GT2YYXdXww",
       name: "River",
       tone: "Confident",
@@ -127,24 +78,10 @@ export const VOICES: Voice[] = [
       gender: "Non-binary"
     },
     {
-      id: "CwhRBWXzGAHq8TO4Fs17",
-      name: "Roger",
-      tone: "Confident",
-      accent: "American",
-      gender: "Male"
-    },
-    {
       id: "EXAVITQu4vr4xnSDxMaL",
       name: "Sarah",
       tone: "Soft",
       accent: "American",
       gender: "Female"
-    },
-    {
-      id: "blHbv24MWmeRgasZH58o",
-      name: "Will",
-      tone: "Friendly",
-      accent: "American",
-      gender: "Male"
     }
   ];
