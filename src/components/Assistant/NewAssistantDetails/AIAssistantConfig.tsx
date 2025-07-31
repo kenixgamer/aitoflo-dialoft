@@ -208,6 +208,9 @@ export default function AIAssistantConfig() {
       callForwardDescription: "",
       callEndDescription: "",
       content: "",
+      knowledgebasetoolId : "",
+      knowledgebaseDescription : "",
+      knowledgebaseName : "",
     },
     similarityBoost: 0.5,
     stability: 0.5,
@@ -239,8 +242,25 @@ export default function AIAssistantConfig() {
     setShowMainVoiceSelect(false);
   };
 
-  const handleSaveChanges = () => {
-    updateAssistant(formData);
+  const handleSaveChanges = async () => {
+    try {
+      if(formData?.metadata?.knowledgebaseIds && formData?.metadata?.knowledgebaseIds.length > 0 && (!formData?.metadata?.knowledgebaseDescription || !formData?.metadata?.knowledgebaseName))  {
+        toast({
+          title: "Error",
+          description: "Knowledgebase description and name are required.",
+          variant: "destructive"
+        })
+      } else {
+        updateAssistant(formData);
+      }
+    } catch (error) {
+      console.error("Error creating voice:", error);
+      toast({
+        title: "Error",
+        description: "Failed to create voice",
+        variant: "destructive"
+      });
+    }
   };
 
   const [activeStep, setActiveStep] = useState(0);
@@ -303,7 +323,6 @@ export default function AIAssistantConfig() {
         toolIds: assistant?.model?.toolIds || [],
         checkCalendarAvailability: hasCheckCalendar || false,
         bookAppointment: hasBookAppointment || false,
-        knowledgebaseIds: assistant?.model?.knowledgeBase?.fileIds || [],
         metadata: {
           checkAvailabilityApiKey:
             assistant?.metadata?.checkAvailabilityApiKey || "",
@@ -323,6 +342,10 @@ export default function AIAssistantConfig() {
           callForwardDescription:
             assistant?.metadata?.callForwardDescription || "",
           callEndDescription: assistant.metadata?.callEndDescription || "",
+          knowledgebasetoolId : assistant?.metadata?.knowledgebasetoolId || "",
+          knowledgebaseDescription : assistant?.metadata?.knowledgebaseDescription || "",
+          knowledgebaseName : assistant?.metadata?.knowledgebaseName || "",
+          knowledgebaseIds: assistant?.metadata?.knowledgebaseIds || [],
         },
         endCallFunctionEnabled: assistant?.endCallFunctionEnabled || false,
         similarityBoost: assistant?.voice?.similarityBoost || 0,

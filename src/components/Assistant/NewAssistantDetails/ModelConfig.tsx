@@ -21,14 +21,17 @@ export default function ModelConfig({ formData, setFormData }: any) {
   if (!workshopId) return null;
   const handleKnowledgeBaseChange = (value: string) => {
     // Check if knowledgebaseIds exists, if not initialize it
-    const currentIds = formData.knowledgebaseIds || [];
+    const currentIds = formData?.metadata?.knowledgebaseIds || [];
     
     // Check if the id is already in the array
     if (!currentIds.includes(value)) {
       // Add the new id to the array
       setFormData({
         ...formData,
-        knowledgebaseIds: [...currentIds, value]
+        metadata: {
+          ...formData.metadata,
+          knowledgebaseIds: [...currentIds, value]
+        }
       });
     }
   };
@@ -45,12 +48,15 @@ export default function ModelConfig({ formData, setFormData }: any) {
   
   const handleRemoveKnowledgebase = (value: string) => {
     // Filter out the id to remove
-    const updatedIds = formData.knowledgebaseIds.filter((id: string) => id !== value);
+    const updatedIds = formData?.metadata?.knowledgebaseIds.filter((id: string) => id !== value);
     
     // Update formData with the new array
     setFormData({
       ...formData,
-      knowledgebaseIds: updatedIds
+      metadata: {
+        ...formData.metadata,
+        knowledgebaseIds: updatedIds
+      }
     });
   };
   const handleRemoveAction = (value: string) => {
@@ -64,10 +70,7 @@ export default function ModelConfig({ formData, setFormData }: any) {
     });
   };
   return (
-    <div className="grid grid-cols-10 gap-6"> 
-    {/* <div className='text-white'>
-    { JSON.stringify(actions?.tools) }
-    </div> */}
+    <div className="grid grid-cols-10 gap-6">
       <div className="col-span-7 space-y-6">
         <Card className="bg-black border-zinc-800">
           <CardHeader>
@@ -170,47 +173,55 @@ export default function ModelConfig({ formData, setFormData }: any) {
             </div>
           </CardContent>
         </Card>
-
         <Card className="bg-black border-zinc-800">
           <CardHeader>
-            <CardTitle className="text-xl font-semibold text-white">Knowledge Base</CardTitle>
+          <CardTitle className="text-xl font-semibold text-white">Actions</CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
             <div className="space-y-2">
-              <Label htmlFor="knowledgeBase" className="text-sm font-medium text-gray-300">Select File</Label>
-              <Select
-                value={selectedFile}
-                onValueChange={handleKnowledgeBaseChange}
-              >
-                <SelectTrigger id="knowledgeBase" className="bg-zinc-900 border-zinc-800 text-white">
-                  <SelectValue placeholder="Select a file" />
+              <Label
+                htmlFor="knowledgeBase"
+                className="text-sm font-medium text-gray-300">
+                Select Action
+              </Label>
+              <Select value={selectedAction} onValueChange={handleActionChange}>
+                <SelectTrigger
+                  id="action"
+                  className="bg-zinc-900 border-zinc-800 text-white">
+                  <SelectValue placeholder="Select a action" />
                 </SelectTrigger>
-                <SelectContent className="bg-zinc-900 border-zinc-800">
-                 {
-                  knowledgeBase?.data?.map((doc: any) => (
-                    <SelectItem key={doc._id} value={doc._id} className="text-white hover:bg-zinc-800">
-                      {doc.fileName}
+                <SelectContent  className="bg-zinc-900 border-zinc-800">
+                  {actions?.tools?.map((action: any) => (
+                    <SelectItem
+                      key={action.toolId}
+                      value={action.toolId}
+                      className="text-white hover:bg-zinc-800">
+                      {action?.name}
                     </SelectItem>
-                  ))
-                 }
+                  ))}
                 </SelectContent>
               </Select>
             </div>
             <div className="space-y-2">
-              {formData.knowledgebaseIds?.map((id: string) => {
-                const doc = knowledgeBase?.data?.find((d: any) => d._id === id);
-                return doc && (
-                  <div key={id} className="flex items-center justify-between bg-black p-2 rounded">
-                    <span className="truncate text-sm text-white">{doc.fileName}</span>
-                    <Button
-                      variant="ghost"
-                      size="sm"
-                      onClick={() => handleRemoveKnowledgebase(id)}
-                      className="text-gray-400 hover:text-white"
-                    >
-                      <X className="h-4 w-4" />
-                    </Button>
-                  </div>
+              {formData.toolIds?.map((id: string) => {
+                const doc = actions?.tools?.find((d: any) => d.toolId === id);
+                return (
+                  doc && (
+                    <div
+                      key={id}
+                      className="flex items-center justify-between bg-card p-2 rounded">
+                      <span className="truncate text-sm text-secondary-foreground">
+                        {doc.name}
+                      </span>
+                      <Button
+                        variant="ghost"
+                        size="sm"
+                        onClick={() => handleRemoveAction(doc.toolId)}
+                        className="text-secondary-foreground hover:text-primary">
+                        <X className="h-4 w-4" />
+                      </Button>
+                    </div>
+                  )
                 );
               })}
             </div>
@@ -218,44 +229,95 @@ export default function ModelConfig({ formData, setFormData }: any) {
         </Card>
         <Card className="bg-black border-zinc-800">
           <CardHeader>
-            <CardTitle className="text-xl font-semibold text-white">Actions</CardTitle>
+            <CardTitle className="text-xl font-semibold text-white">
+              Knowledge Base
+            </CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
             <div className="space-y-2">
-              <Label htmlFor="knowledgeBase" className="text-sm font-medium text-gray-300">Select Action</Label>
+            <div className="input-box d-flex flex-col space-y-2">
+                <label className='text-sm font-medium text-zinc-300' htmlFor="name">Name</label>
+                <Input
+                  id="name"
+                  type="text"
+                  placeholder="Enter name"
+                  value={formData?.metadata?.knowledgebaseName}
+                  onChange={(e) => {
+                    const value = e.target.value;
+                    const isValid = /^[a-zA-Z0-9_-]{0,64}$/.test(value);
+                    if (isValid) {
+                      setFormData({ 
+                        ...formData, 
+                        metadata: { 
+                          ...formData.metadata, 
+                          knowledgebaseName: value 
+                        } 
+                      });
+                    }
+                  }}
+                  className="bg-zinc-900 border-zinc-800 text-white focus:border-zinc-700 focus-visible:ring-1 focus-visible:ring-zinc-700"
+                />
+              </div>
+              <div className="input-box d-flex flex-col space-y-2">
+                <label className='text-sm font-medium text-zinc-300' htmlFor="description">Description</label>
+                <Input
+                  id="description"
+                  type="text"
+                  placeholder="Enter description"
+                  value={formData?.metadata?.knowledgebaseDescription}
+                  onChange={(e) =>
+                    setFormData({ ...formData, metadata: { ...formData.metadata, knowledgebaseDescription: e.target.value } })
+                  }
+                  className="bg-zinc-900 border-zinc-800 text-white focus:border-zinc-700 focus-visible:ring-1 focus-visible:ring-zinc-700"
+                />
+              </div>
+            </div>
+            <div className="space-y-2">
+              <Label
+                htmlFor="knowledgeBase"
+                className="text-sm font-medium text-zinc-300">
+                Select File
+              </Label>
               <Select
-                value={selectedAction}
-                onValueChange={handleActionChange}
-              >
-                <SelectTrigger id="action" className="bg-zinc-900 border-zinc-800 text-white">
-                  <SelectValue placeholder="Select a action" />
+                value={selectedFile}
+                onValueChange={handleKnowledgeBaseChange}>
+                <SelectTrigger
+                  id="knowledgeBase"
+                  className="bg-zinc-900 border-zinc-800 text-white">
+                  <SelectValue className="text-white" placeholder="Select a file" />
                 </SelectTrigger>
                 <SelectContent className="bg-zinc-900 border-zinc-800">
-                 {
-                  actions?.tools?.map((action: any) => (
-                    <SelectItem key={action.toolId} value={action.toolId} className="text-white hover:bg-zinc-800">
-                      {action?.name}
-                    </SelectItem> 
-                  ))
-                 }
+                  {knowledgeBase?.data?.map((doc: any) => (
+                    <SelectItem
+                      key={doc._id}
+                      value={doc._id}
+                      className="text-white hover:bg-zinc-800">
+                      {doc.fileName}
+                    </SelectItem>
+                  ))}
                 </SelectContent>
               </Select>
             </div>
             <div className="space-y-2">
-              {formData.toolIds?.map((id: string) => {
-                const doc = actions?.tools?.find((d: any) => d.toolId === id);
-                return doc && (
-                  <div key={id} className="flex items-center justify-between bg-black p-2 rounded">
-                    <span className="truncate text-sm text-white">{doc.name}</span>
-                    <Button
-                      variant="ghost"
-                      size="sm"
-                      onClick={() => handleRemoveAction(doc.toolId)}
-                      className="text-gray-400 hover:text-white"
-                    >
-                      <X className="h-4 w-4" />
-                    </Button>
-                  </div>
+              {formData?.metadata?.knowledgebaseIds?.map((id: string) => {
+                const doc = knowledgeBase?.data?.find((d: any) => d._id === id);
+                return (
+                  doc && (
+                    <div
+                      key={id}
+                      className="flex items-center justify-between bg-zinc-900 p-2 rounded">
+                      <span className="truncate text-sm text-white">
+                        {doc.fileName}
+                      </span>
+                      <Button
+                        variant="ghost"
+                        size="sm"
+                        onClick={() => handleRemoveKnowledgebase(id)}
+                        className="text-white hover:text-zinc-400">
+                        <X className="h-4 w-4" />
+                      </Button>
+                    </div>
+                  )
                 );
               })}
             </div>
